@@ -93,7 +93,7 @@ const questions = [
     indices: [
 		{ id: "indice-1", texte: "À qui appartient ce build ?", image: "images/dragon.png", solutions: ["Jowy"], affichage:"Jowy" }
 	],
-    vraieQuestion: { texte: "Rend au sanctuaire des Axolotls. Combien y comptes-tu de statues ?", solutions: ["4", "quatre"], affichage: "4 !"}
+    vraieQuestion: { texte: "Rend toi au sanctuaire des Axolotls. Combien y comptes-tu de statues ?", solutions: ["4", "quatre"], affichage: "4 !"}
   },
   {
     id: "etape-11",
@@ -102,7 +102,7 @@ const questions = [
 		{ id: "indice-1", texte: "Corderonne serait fier de cet endroit !", solutions: ["pisse arc-en-ciel", "piste arc-en-ciel", "aqueduc", "aqueduc arc-en-ciel"], affichage:"La pisse arc-en-ciel !", commentaire:"hommage à Corderonne !" },
 		{ id: "indice-2", texte: "Regarde bien l'aqueduc, combien de couleur le compose ?", solutions: ["7", "sept"], affichage:"7 couleurs !", commentaire:"Rouge, Orange, Vert, Jaune, Bleu foncé, Bleu clair, Violet" }
 	],
-    vraieQuestion: { texte: "Dans un certain livre, combien de questions, le.la streamer.euse à donné comme question ?", solutions: ["4", "quatre"], affichage: "4 !", commentaire:"Merci encore pour le gâteau, je me suis régalé !"}
+    vraieQuestion: { texte: "Dans un certain livre pour les 5 ans d'Æternam, combien de questions, le.la streamer.euse à donné comme question ?", solutions: ["4", "quatre"], affichage: "4 !", commentaire:"Merci encore pour le gâteau, je me suis régalé !"}
   },
   {
     id: "etape-12",
