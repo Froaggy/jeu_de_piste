@@ -15,18 +15,20 @@
 const questions = [
   {
     id: "etape-1",
-    titre: "Étape 1",
+    titre: "Point de départ",
     indices: [
-      { id: "indice-1", texte: "Qui mange des frites?", solutions: ["Aless"], commentaire: "Aless le gros mangeur de frite la" },
-      { id: "indice-2", texte: "Ou il habite ?", solutions: ["Belgique"] }
+      { id: "indice-1", texte: "https://www.youtube.com/watch?v=akrdSDew2qM Quel est le point de départ montré dans la vidéo ?", solutions: ["Spawn", "le spawn"], commentaire: "Désolé pour la qualité 😅 On est d’accord que ça ressemble à “I’m blue, daboudi dabouda…” ?" },
+      { id: "indice-2", texte: "Combien de geysers y a-t-il ?", solutions: ["3"], commentaire: "d’ailleurs, y as-tu trouvé tous les easters eggs ?" }
     ],
-    vraieQuestion: { texte: "Combien de barquette de frite il mange par jour ? (12)", solutions: ["12", "douze"], affichage: "12 (douze)", commentaire: "Il y en avait même un treizième, caché derrière son écran !" }
+    vraieQuestion: { texte: "Combien de geysers y a-t-il ?", solutions: ["3", "trois"], affichage: "3", commentaire: "d’ailleurs, y as-tu trouvé tous les easters eggs ?" }
   },
   {
     id: "etape-2",
     titre: "Étape 2",
-    indices: [],
-    vraieQuestion: { texte: "Quelle est cette chose orange qu'on sculpte à Halloween ?", solutions: ["Citrouille"] }
+    indices: [
+		{ id: "indice-1", texte: "This is Halloween !", solutions: ["Citrouille", "la citrouille", "une citrouille", "pumpkin", "citrouille géante", "giant pumpkin"], commentaire: "référence au prank d’Edgar dans la saison 4." },
+	],
+    vraieQuestion: { texte: "Combien de bougie la citrouille a dans sa bouche", solutions: ["2"], affichage "2" }
   },
   {
     id: "etape-3",
