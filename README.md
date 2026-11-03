@@ -29,6 +29,9 @@ Tester en local : ouvre `index.html` dans un navigateur (ou `python3 -m http.ser
 ## 3. Écrire tes énigmes (`js/questions.js`)
 Une étape = `id` stable + `titre` + `indices` (0, 1 ou plusieurs) + `vraieQuestion` (optionnelle). Chaque indice et la question ont `texte` et `solutions` (autant que voulu). Le compteur `x / N` et la barre s'adaptent seuls. Les solutions sont tolérantes : majuscules, accents, espaces, ponctuation, et petites fautes (réponses de ≤ 4 caractères ou contenant un chiffre : exactes ; 5-8 caractères : 1 faute ; au-delà : 2 fautes). Ajoute toi-même les variantes utiles (« pumpkin »…).
 
+### Réponse affichée et anecdote
+Une fois un indice ou une question validé, le joueur voit la **bonne orthographe** (et non sa saisie, qui reste visible dans « Mes tentatives »). Par défaut c'est la **première solution** de la liste ; pour afficher autre chose, ajoute `affichage: "Citrouille géante"`. Pour une anecdote sous la réponse, ajoute `commentaire: "Ton texte"`. Les deux champs sont optionnels et peuvent être ajoutés ou modifiés à tout moment sans effet sur les progressions.
+
 ### Modifier le jeu en cours de partie : précautions
 La progression est **recalculée à partir des tentatives enregistrées**, associées à `id` d'étape + `id` d'indice. Donc :
 - **Sans risque** : changer `titre`, `texte`, `solutions` ; réordonner les étapes ou les indices ; ajouter une étape à la fin.
