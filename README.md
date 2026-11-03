@@ -32,6 +32,16 @@ Une étape = `id` stable + `titre` + `indices` (0, 1 ou plusieurs) + `vraieQuest
 ### Réponse affichée et anecdote
 Une fois un indice ou une question validé, le joueur voit la **bonne orthographe** (et non sa saisie, qui reste visible dans « Mes tentatives »). Par défaut c'est la **première solution** de la liste ; pour afficher autre chose, ajoute `affichage: "Citrouille géante"`. Pour une anecdote sous la réponse, ajoute `commentaire: "Ton texte"`. Les deux champs sont optionnels et peuvent être ajoutés ou modifiés à tout moment sans effet sur les progressions.
 
+### Images et vidéos dans les énigmes
+Deux champs **facultatifs et indépendants**, utilisables sur n'importe quel indice ou question (texte seul, image seule, vidéo seule, ou plusieurs ; `texte: ""` est accepté) :
+```js
+{ id: "indice-1", texte: "Regarde bien", image: "images/enigme-1.png", lecteur: "https://youtu.be/XXXXXXXXXXX", solutions: ["..."] }
+```
+- `image` : chemin relatif depuis la racine du site. Place tes fichiers dans le dossier `images/` (respecte la casse des noms : GitHub Pages la distingue). L'image garde ses proportions et ne dépasse jamais la largeur de la page (ni 70 % de la hauteur de l'écran).
+- `lecteur` : lien YouTube `watch?v=`, `youtu.be/` ou `shorts/`, lu dans la page avec ses contrôles (domaine `youtube-nocookie.com`). Si le lien n'est pas reconnu, un message discret l'indique.
+- Les médias restent visibles quand le joueur revient sur une étape passée. N'utilise que des vidéos dont l'intégration est autorisée (certaines sont bloquées par leur propriétaire).
+- Ces champs n'ont aucun effet sur les réponses, la progression, l'historique ni Supabase.
+
 ### Modifier le jeu en cours de partie : précautions
 La progression est **recalculée à partir des tentatives enregistrées**, associées à `id` d'étape + `id` d'indice. Donc :
 - **Sans risque** : changer `titre`, `texte`, `solutions` ; réordonner les étapes ou les indices ; ajouter une étape à la fin.

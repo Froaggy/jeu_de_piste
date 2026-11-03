@@ -28,7 +28,7 @@ revoke all on public.players, public.attempts from anon;
 grant select on public.players, public.attempts to authenticated;
 
 create or replace function public.is_admin() returns boolean
-language sql stable as $$ select coalesce(auth.jwt() ->> 'email', '') = 'petrifiedluck2113@gmail.com' $$;
+language sql stable as $$ select coalesce(auth.jwt() ->> 'email', '') = 'ton-email@exemple.fr' $$;
 
 drop policy if exists admin_read_players on public.players;
 drop policy if exists admin_read_attempts on public.attempts;

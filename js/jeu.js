@@ -35,7 +35,7 @@ const Jeu = (() => {
       const mine = S.attempts.filter(a => a.step_id === step.id && a.item_id === it.id);
       const good = mine.find(a => a.is_correct), active = i === activeIdx && !past;
       html += `<section class="item ${good ? "valide" : ""}"><p class="type">${it.kind === "question" ? "Question" : "Indice"}</p>
-        <p class="texte">${esc(it.texte)}</p>`;
+        ${it.texte ? `<p class="texte">${esc(it.texte)}</p>` : ""}${media(it)}`;
       if (good) {
         const bonne = it.affichage || (it.solutions && it.solutions[0]) || good.answer; // orthographe officielle
         html += `<p class="rep-ok">✔ ${esc(bonne)}</p>`;
@@ -54,6 +54,9 @@ const Jeu = (() => {
       ${S.view < maxView ? `<button class="btn" id="suiv">Suivant</button>` : ""}
       ${cur >= total ? `<button class="btn" id="fin">Retour à la victoire</button>` : (cur - S.view > 1 ? `<button class="btn sec" id="courante">Étape en cours</button>` : "")}</nav>`;
     $("jeu").innerHTML = html;
+    document.querySelectorAll("#jeu .media img").forEach(img => img.addEventListener("error", () => {
+      img.replaceWith(Object.assign(document.createElement("p"), { className: "muted", textContent: "Image introuvable : " + img.getAttribute("src") }));
+    }));
     S.flash = null;
     const f = $("form");
     if (f) {
@@ -93,8 +96,22 @@ const Jeu = (() => {
     } else { S.ko = true; render(); }
   }
 
+  // Accepte watch?v=..., youtu.be/..., shorts/..., embed/..., live/...
   function youtubeId(url) {
-    const m = String(url).match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/); return m ? m[1] : null;
+    const m = String(url).match(/(?:v=|youtu\.be\/|embed\/|shorts\/|live\/)([\w-]{11})/); return m ? m[1] : null;
+  }
+
+  // Médias facultatifs et indépendants d'un indice / d'une question : `image` (chemin local) et `lecteur` (YouTube)
+  function media(it) {
+    let h = "";
+    if (it.image) h += `<figure class="media"><img src="${esc(it.image)}" alt="${esc(it.texte || "Illustration de l'énigme")}" loading="lazy"></figure>`;
+    if (it.lecteur) {
+      const id = youtubeId(it.lecteur);
+      if (id) h += `<div class="media video"><iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="Vidéo de l'énigme" loading="lazy" allowfullscreen
+        allow="accelerometer; encrypted-media; picture-in-picture; fullscreen"></iframe></div>`;
+      else { console.warn("Lien YouTube non reconnu :", it.lecteur); h += `<p class="muted">Vidéo indisponible (lien non reconnu).</p>`; }
+    }
+    return h;
   }
 
   function victoire() {
