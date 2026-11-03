@@ -9,7 +9,7 @@ const CONFIG = {
 
   TITRE: "Le Jeu de piste d'Æternam !",
   INTRO: [
-    "Salut ! Je te propose ce potit jeu de piste !"
+    "Salut ! Je te propose ce potit jeu de piste !",
 	"Le but : parcourir les différentes bases du serveur. Je n'ai pas pu inclure tous les builds, il y en a beaucoup trop ! (et puis fallait pas que ça dure trop longtemps).",
 	"Comment jouer ?",
     "Observez chaque base et répondez à la question. Une bonne réponse vous donnera une énigme menant à la base suivante.",
