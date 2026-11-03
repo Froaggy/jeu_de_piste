@@ -28,7 +28,7 @@ const questions = [
     indices: [
 		{ id: "indice-1", texte: "This is Halloween !", solutions: ["Citrouille", "la citrouille", "une citrouille", "pumpkin", "citrouille géante", "giant pumpkin"], commentaire: "référence au prank d’Edgar dans la saison 4." }
 	],
-    vraieQuestion: { texte: "Combien de bougie la citrouille a dans sa bouche", solutions: ["2"], affichage "2" }
+    vraieQuestion: { texte: "Combien de bougie la citrouille a dans sa bouche", solutions: ["2"], affichage: "2" }
   },
   {
     id: "etape-3",
