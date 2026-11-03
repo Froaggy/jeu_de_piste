@@ -5,7 +5,7 @@ const CONFIG = {
   SUPABASE_ANON_KEY: "sb_publishable_PsiSnNycwxsOyOMy7eJRjA_FhSZtfDS",
 
   // Récompense finale : n'importe quelle adresse YouTube (watch?v=..., youtu.be/..., embed/...)
-  VIDEO_URL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  VIDEO_URL: "https://youtu.be/m0IpOrru-mU ",
 
   TITRE: "Le Jeu de piste d'Æternam !",
   INTRO: [
