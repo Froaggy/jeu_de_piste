@@ -26,6 +26,7 @@ input[type=text]:focus{outline:2px solid var(--accent);border-color:var(--accent
 .lien{background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;text-decoration:underline;padding:0}
 .item{border-top:1px solid var(--ligne);padding:18px 0}.item:first-of-type{border-top:0}
 .type{margin:0 0 4px;font-size:.85rem;color:var(--muted)}
+.texte,.anecdote{white-space:pre-line}
 .texte{font-size:1.15rem;margin:0 0 12px;font-weight:500}
 .item.valide .texte{margin-bottom:6px}
 .rep-ok{color:var(--ok);font-weight:600;margin:0}
