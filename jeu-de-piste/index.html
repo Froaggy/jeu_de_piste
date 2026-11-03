@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeu de piste</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="entete">
+  <h1 id="titre-jeu"></h1>
+  <div id="barre-bloc" hidden>
+    <div class="ligne"><span>Joueur : <strong id="pseudo-affiche"></strong> <button id="changer" class="lien">changer</button></span><span id="compteur" class="compteur"></span></div>
+    <div id="barre-wrap" class="barre" role="progressbar" aria-valuemin="0" aria-valuenow="0"><div id="barre"></div></div>
+  </div>
+</header>
+<main>
+  <section id="accueil" class="carte">
+    <div id="intro"></div>
+    <form id="form-pseudo" autocomplete="off">
+      <label for="pseudo">Ton pseudo</label>
+      <div class="rangee">
+        <input id="pseudo" type="text" maxlength="30" required placeholder="ex. Camille">
+        <button id="commencer" class="btn" type="submit">Commencer</button>
+      </div>
+      <p id="pseudo-erreur" class="statut ko"></p>
+    </form>
+  </section>
+  <div id="jeu" class="carte" hidden></div>
+  <section id="victoire" class="carte" hidden>
+    <div id="confettis" class="confettis" aria-hidden="true"></div>
+    <h2>Félicitations !</h2>
+    <p>Tu as résolu toutes les étapes. Voici ta récompense :</p>
+    <div id="video" class="video"></div>
+    <button id="revoir" class="btn sec">Revoir mes réponses</button>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/questions.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/progression.js"></script>
+<script src="js/database.js"></script>
+<script src="js/jeu.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
