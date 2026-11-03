@@ -6,12 +6,7 @@
    - `indices` peut être vide [] ; `vraieQuestion` peut être omise.
    - L'ordre du tableau = l'ordre du jeu. Tu peux le changer sans risque.
    - Plusieurs solutions acceptées : ajoute-les dans `solutions`.
-   - OPTIONNEL sur chaque indice et sur la vraieQuestion (indépendants, cumulables) :
-       image       : chemin local d'une image du projet, ex. "images/enigme-1.png"
-                     (proportions conservées, taille limitée automatiquement)
-       lecteur     : lien YouTube (watch?v=..., youtu.be/..., shorts/...) lu directement dans la page
-     `texte` peut être laissé vide ("") si l'énigme n'est qu'une image ou une vidéo.
-   - OPTIONNEL aussi :
+   - OPTIONNEL sur chaque indice et sur la vraieQuestion :
        affichage   : la réponse telle qu'elle s'affiche une fois validée
                      (par défaut : la 1re solution de la liste, avec sa bonne orthographe).
        commentaire : une anecdote affichée sous la réponse, une fois validée seulement.
@@ -20,23 +15,25 @@
 const questions = [
   {
     id: "etape-1",
-    titre: "Étape 1",
+    titre: "Point de départ",
     indices: [
-      { id: "indice-1", texte: "Escargot", solutions: ["Martin", "Mart", "Marty"], commentaire: "Martin est l'escargot de la bande, il porte toujours sa maison avec lui." },
-      { id: "indice-2", texte: "Un deuxième indice : la capitale de la France", solutions: ["Paris"] }
+      { id: "indice-1", texte: "Quel est le point de départ montré dans la vidéo ?", lecteur:"https://www.youtube.com/watch?v=akrdSDew2qM", solutions: ["Spawn", "le spawn"], commentaire: "Désolé pour la qualité 😅 On est d’accord que ça ressemble à “I’m blue, daboudi dabouda…” ?" },
+      { id: "indice-2", texte: "Combien de geysers y a-t-il ?", solutions: ["3"], commentaire: "d’ailleurs, y as-tu trouvé tous les easters eggs ?" }
     ],
-    vraieQuestion: { texte: "Combien y en a-t-il ?", solutions: ["12", "douze"], affichage: "12 (douze)", commentaire: "Il y en avait même un treizième, caché derrière la porte !" }
+    vraieQuestion: { texte: "Combien de geysers y a-t-il ?", solutions: ["3", "trois"], affichage: "3", commentaire: "d’ailleurs, y as-tu trouvé tous les easters eggs ?" }
   },
   {
     id: "etape-2",
     titre: "Étape 2",
-    indices: [],
-    vraieQuestion: { texte: "Quelle est cette chose orange qu'on sculpte à Halloween ?", image: "images/exemple.svg", solutions: ["Citrouille géante", "citrouille", "pumpkin", "giant pumpkin"] }
+    indices: [
+		{ id: "indice-1", texte: "This is Halloween !", image: "images/exemple.svg", solutions: ["Citrouille", "la citrouille", "une citrouille", "pumpkin", "citrouille géante", "giant pumpkin"], commentaire: "référence au prank d’Edgar dans la saison 4." }
+	],
+    vraieQuestion: { texte: "Combien de bougie la citrouille a dans sa bouche", solutions: ["2"], affichage: "2" }
   },
   {
     id: "etape-3",
     titre: "Étape 3",
-    indices: [{ id: "indice-1", texte: "Le plus grand océan du monde", lecteur: "https://youtu.be/dQw4w9WgXcQ", solutions: ["Pacifique", "Océan Pacifique"] }],
+    indices: [{ id: "indice-1", texte: "Quel est le plus grand océan du monde ?", solutions: ["Pacifique", "Océan Pacifique"] }],
     vraieQuestion: { texte: "Combien font 6 × 7 ?", solutions: ["42", "quarante-deux", "quarante deux"] }
   }
 ];
