@@ -56,7 +56,7 @@ const questions = [
     id: "etape-6",
     titre: "Étape 6",
     indices: [
-		{ id: "indice-1", texte: "À qui appartient cet endroit : c'est le zinclar de Mojo ou quoi ?", solutions: ["Edgar", "Kazuu", "Edgar & Kazuu", "Edgar et Kazuu"], affichage:"Edgar & Kazuu" }
+		{ id: "indice-1", texte: "À qui appartient cet endroit : c'est le zinclar de Mojo ou quoi ?", solutions: ["Edgar", "Kazuu", "Edgar & Kazuu", "Edgar et Kazuu", "kazuu et edgar", "kazuu & edgar"], affichage:"Edgar & Kazuu" }
 	],
     vraieQuestion: { texte: "Quel bois a été utilisé pour construire cet arbre ?", solutions: ["du chêne", "chêne", "oak", "oak wood"], affichage: "Du chêne !", commentaire:"Très bel arbre au demeurant"}
   },
@@ -82,7 +82,7 @@ const questions = [
     id: "etape-9",
     titre: "Étape 9",
     indices: [
-		{ id: "indice-1", texte: "Quelle immense structure est visitée en Allemagne chaque année par plus d'un million de touristes ?", solutions: ["château de Neuschwanstein"], affichage: "Château de Neuschwanstein !" },
+		{ id: "indice-1", texte: "Quelle immense structure est visitée en Allemagne chaque année par plus d'un million de touristes ?", solutions: ["château de Neuschwanstein", "Neuschwanstein"], affichage: "Château de Neuschwanstein !" },
 		{ id: "indice-2", texte: "Quel streamer.euse possède un château de cette envergure ?", solutions: ["Lirae", "Lira"], affichage: "Lirae !"}
 	],
     vraieQuestion: { texte: "Quel est le nombre de tours bâties sur les murailles ?", solutions: ["16", "seize"], affichage: "16 !"}
@@ -159,7 +159,7 @@ const questions = [
     id: "etape-18",
     titre: "Étape 18",
     indices: [
-		{ id: "indice-1", texte: "Comment nommes-t-on les petits ?", solutions: ["nains", "les nains", "nain", "un nain"], affichage:"Les nains !"},
+		{ id: "indice-1", texte: "Comment nommes-t-on les petites personnes ?", solutions: ["nains", "les nains", "nain", "un nain"], affichage:"Les nains !"},
 		{ id: "indice-2", texte: "Qui a cette particularité sur le serveur ?", solutions: ["Orelio", "Orelionova", "Babs", "Bab_s"], affichage:"Orelio & Babs !"},
 		{ id: "indice-3", texte: "Quel est l'aliment produit dans la maison aux 1000 bougies ?", solutions: ["miel", "le miel", "du miel"], affichage:"Le miel !"}
 	],
