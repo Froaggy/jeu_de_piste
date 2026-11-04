@@ -19,7 +19,7 @@ const questions = [
     indices: [
       { id: "indice-1", texte: "Quel est le point de départ montré dans la vidéo ?", lecteur:"https://www.youtube.com/watch?v=akrdSDew2qM", solutions: ["Spawn", "le spawn"], affichage:"Le Spawn !", commentaire: "Désolé pour la qualité 😅 On est d’accord que ça ressemble à “I’m blue, daboudi dabouda…” ?" }
     ],
-    vraieQuestion: { texte: "Combien de geysers y a-t-il ?", solutions: ["3", "trois"], affichage: "3 !", commentaire: "d’ailleurs, y as-tu trouvé tous les easters eggs ?" }
+    vraieQuestion: { texte: "Combien de geysers y a-t-il ?", solutions: ["3", "trois"], affichage: "3 !", commentaire: "d’ailleurs, y as-tu trouvé tous les easters eggs ?\nPS : Les 3 premières questions ont un rapport avec le spawn." }
   },
   {
     id: "etape-2",
