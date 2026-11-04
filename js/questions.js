@@ -50,7 +50,7 @@ const questions = [
 		{ id: "indice-1", texte: "Décrypte moi : “Frolvhxp“", solutions: ["coliseum", "colisée"], affichage:"le colisée !" },
 		{ id: "indice-2", texte: "À quel streamer fait référence ce mot ?", solutions: ["kires", "kireslechat"], affichage:"kireslechat !" }
 	],
-    vraieQuestion: { texte: "À quoi sert la construction de kires ?", solutions: ["se battre", "battre", "taper", "se taper"], affichage: "Se Battre !"}
+    vraieQuestion: { texte: "À quoi sert la construction de kires ?", solutions: ["se battre", "battre", "taper", "se taper", "bagarre", "combattre"], affichage: "Se Battre !"}
   },
   {
     id: "etape-6",
@@ -65,7 +65,7 @@ const questions = [
     titre: "Étape 7",
     indices: [
 		{ id: "indice-1", texte: "A qui appartient cet endroit : il s'agit du plus grand portail existant dans l'overworld", solutions: ["Leupho", "Leuphou"], affichage:"Leupho !" },
-		{ id: "indice-2", texte: "Calculer la superficie de ce portail", solutions: ["529", "cinq cent vingt neuf", "23x23"], affichage: "23x23 soit 529 blocs !", commentaire:"On peut pas faire plus grand ! Sinon il ne s’allume pas."}
+		{ id: "indice-2", texte: "Calculer la superficie de ce portail", solutions: ["529", "cinq cent vingt neuf", "23x23", "23 x 23"], affichage: "23x23 soit 529 blocs !", commentaire:"On peut pas faire plus grand ! Sinon il ne s’allume pas."}
 	],
     vraieQuestion: { texte: "Quel est le numéro noté après “Leupho is real“ dans ce beau château de Mario ?", solutions: ["200124", "20/01/24"], affichage: "200124 !", commentaire:"Il s'agit en réalité de la date de son tout premier stream !"}
   },
@@ -82,7 +82,7 @@ const questions = [
     id: "etape-9",
     titre: "Étape 9",
     indices: [
-		{ id: "indice-1", texte: "Quelle immense structure est visitée en Allemagne chaque année par plus d'un million de touristes ?", solutions: ["château de Neuschwanstein", "Neuschwanstein"], affichage: "Château de Neuschwanstein !" },
+		{ id: "indice-1", texte: "Quelle immense structure est visitée en Allemagne chaque année par plus d'un million de touristes ?", solutions: ["château de Neuschwanstein", "Neuschwanstein", "château de bavière", "bavière"], affichage: "Château de Neuschwanstein !" },
 		{ id: "indice-2", texte: "Quel streamer.euse possède un château de cette envergure ?", solutions: ["Lirae", "Lira"], affichage: "Lirae !"}
 	],
     vraieQuestion: { texte: "Quel est le nombre de tours bâties sur les murailles ?", solutions: ["16", "seize"], affichage: "16 !"}
@@ -108,7 +108,7 @@ const questions = [
     id: "etape-12",
     titre: "Étape 12",
     indices: [
-		{ id: "indice-1", texte: "Qui est le petit filou à caché des “suavemente“ partout dans le serveur ?", solutions: ["Silent", "Silent_seef"], affichage:"Silent_seef !", commentaire:"Il paraît qu'il apprécie beaucoup Gras-non-dort" }
+		{ id: "indice-1", texte: "Qui est le petit filou qui à caché des “suavemente“ partout dans le serveur ?", solutions: ["Silent", "Silent_seef"], affichage:"Silent_seef !", commentaire:"Il paraît qu'il apprécie beaucoup Gras-non-dort" }
 	],
     vraieQuestion: { texte: "Combien de salles “officielles“ y a-t-il dans la CTM ? (le discord peut vous aider)", solutions: ["15", "quinze"], affichage: "15 !", commentaire:"J'ai mis à peine 5h pour finir ces épreuves !"}
   },
@@ -151,7 +151,7 @@ const questions = [
     id: "etape-17",
     titre: "Étape 17",
     indices: [
-		{ id: "indice-1", texte: "Qui a construit l'un des endroits les plus lumineux du serveur ?", solutions: ["Delphuss"], affichage:"Delphuss !"}
+		{ id: "indice-1", texte: "qui a construit le build le plus lumineux du serveur ?", solutions: ["Delphuss"], affichage:"Delphuss !"}
 	],
     vraieQuestion: { texte: "Quel est le nombre d'entrées à la lampe de chevet ?", solutions: ["4", "quatre"], affichage: "4 !"}
   },
@@ -177,7 +177,7 @@ const questions = [
     id: "etape-20",
     titre: "Étape 20",
     indices: [
-		{ id: "indice-1", texte: "Dans quel endroit peut-on trouver un moyen de transport mis en service à Paris en 1900 ?", solutions: ["le métro", "metro", "métro parisien"], affichage:"Le métro !", commentaire:"Il s'agit ici d'un métrou !"},
+		{ id: "indice-1", texte: "quel moyen de transport a été inauguré à Paris en 1900 ?", solutions: ["le métro", "metro", "métro parisien"], affichage:"Le métro !", commentaire:"Il s'agit ici d'un métrou !"},
 		{ id: "indice-2", texte: "Qui possède ce type de transport sur le serveur ?", solutions: ["Keraloon", "kera"], affichage:"Keraloon !"}
 	],
     vraieQuestion: { texte: "Combien de Yakyak Kera possède-t-elle ?", solutions: ["4", "quatre"], affichage: "4 !", commentaire:"Plus que quelques questions, tiens bon !"}
@@ -205,6 +205,6 @@ const questions = [
 		{ id: "indice-1", texte: "Bravo pour avoir vu presque toutes les bases du serveur ! J'espère que ce voyage t'a plu. La destination finale est à portée d'élytras\n\nHop Léééé le grand final !\n\n Calcul des coordonnées :\n\n X = Les cafards géants + les Yakyak de Kera - les chaînes de Kidsora + nombre d'œufs dans la Poêle Géante", solutions: ["10", "dix"], affichage:"10 !"},
 		{ id: "indice-2", texte: "Y = Les tours de Lirae + le nombre de salles chez Silent - la réponse de Mel", solutions: ["21", "vingt et un"], affichage:"21 !"}
 	],
-    vraieQuestion: { texte: "Z = (le cobble d'O'relio - laméthyste commandée de rockchot × les jeux d'argent de Froaggy) + la surface du portail du Nether de Leupho × les axolotls de Jowy - la saison de Bmou ×  (les couleurs de la pisse arc-en-ciel - les geysers du spawn) × (les questions du livre de Lyorine + les entrées de la lampe de Delphuss + Les bougies de la citrouille) + le nombre de Peach, coupé en 2001 et 24 et additionné.", solutions: ["2021"], affichage: "2021 !", commentaire:"ces chiffres ne te rappellent rien ?"}
+    vraieQuestion: { texte: "Z = (le cobble d'O'relio - laméthyste commandée de rockchot × les jeux d'argent de Froaggy) + la surface du portail du Nether de Leupho × les axolotls de Jowy - la saison de Bmou ×  (les couleurs de la pisse arc-en-ciel - les geysers du spawn) × (les questions du livre de Lyorine + les entrées de la lampe de Delphuss + Les bougies de la citrouille) + le nombre trouvé au chateau de peach séparé en 2001 et 24 et additionné", solutions: ["2021"], affichage: "2021 !", commentaire:"ces chiffres ne te rappellent rien ?"}
   }
 ];

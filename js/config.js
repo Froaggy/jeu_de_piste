@@ -20,6 +20,7 @@ const CONFIG = {
 	"La dernière étape demande un calcul : prévoyez un petit carnet pour noter vos réponses et vos coordonnées !",
 	"Jouez en équipe, utilisez Internet si besoin et surtout, soyez patient(e).",
 	"Prenez vos élytras, vos bateaux, vos poneys et… ZÉÉÉÉ PARTIE !",
+	"Derniers conseils : jouez en équipe, servez-vous d’internet si besoin, soyez patient.e.",
 	"Bonne chance !"
   ]
 };
